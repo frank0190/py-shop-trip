@@ -10,7 +10,10 @@ class Shop:
     products: dict
 
     def products_cost(self, cart: dict) -> dict:
-        return {product: cart[product] * self.products[product] for product in cart}
+        return {
+            product: cart[product] * self.products[product]
+            for product in cart
+        }
 
     def shopping(self, customer_name: str, cart: dict) -> None:
         print("Date: ", datetime.now().strftime("%d/%m/%Y %H:%M:%S"))
